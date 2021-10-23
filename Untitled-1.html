@@ -8,12 +8,38 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="Get id">>
+    <div class="Get phase">
         Введите id дорожного контроллера
         <input type="text" id="dk">
-        <input type="button" value="Проверить id" onclick="setInterval(GetPhase, 1000)">
+        <input type="button" value="Проверить id" onclick="GetInfo()">
     </div class info>
+    <div>
+        Контроль состояние и фазы
     <input type="text" id="status">
     <input type="text" id="phase">
+    </div>
+    <div class="Programm info">
+        Информация о программе
+        <div>
+            Начало работы программы
+        <input type="text" id="start">
+        </div>
+        <div>
+            Конец работы программы
+        <input type="text" id="end">
+        </div>
+        <div>
+            Количество фаз
+        <input type="text" id="phases">
+        </div>
+        <div>
+            Время фаз
+        <input type="text" id="phasesTime">
+        </div>
+        <div>
+            Время цикла
+        <input type="text" id="cycleTime">
+        </div>
+    </div>
 </body>
 </html>
