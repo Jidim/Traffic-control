@@ -4,22 +4,28 @@ async function GetInfo(id) {
     try {
     let response = await fetch(requestURL);
     if (response.ok) {
-        let json = await response.text();
-        var rc = JSON.parse(json);
-        document.getElementById("start" + id).value = rc["program_created_at"];
-        document.getElementById("end" + id).value = rc["changed_time_at"];
-        var cycleTime = parseInt(rc["t_cycle"]);
+        let json = await response.json();
+       var problem = document.getElementById("problems" + id);
+        if (json["mode"] != json["real_mode"])
+            problem.value = "Несоответствие модов";
+        if (json["program_id"] != json["real_program_id"])
+            problem.value = "Несоответствие программ";
+        document.getElementById("start" + id).value = json["program_created_at"];
+        document.getElementById("end" + id).value = json["changed_time_at"];
+        var cycleTime = parseInt(json["t_cycle"]);
         document.getElementById("cycleTime" + id).value = cycleTime.toString();
-        document.getElementById("phases" + id).value = "1";
+        if (document.getElementById("time" + id.toString()).value == "")
+            PhaseTime(id);
     }
     else {
         console.log("Ошибка HTTP " + response.status);
     }
     } catch {
-    document.getElementById("start" + id).value = "Нет доступа к контроллеру";
-    document.getElementById("end" + id).value = "Нет доступа к контроллеру";
-    document.getElementById("cycleTime" + id).value = "Нет доступа к контроллеру";
-    document.getElementById("phases" + id).value = "Нет доступа к контроллеру";
+        document.getElementById("problems" + id).value = "Невозможно подключиться к full_info"
+        document.getElementById("start" + id).value = "Нет доступа к контроллеру";
+        document.getElementById("end" + id).value = "Нет доступа к контроллеру";
+        document.getElementById("cycleTime" + id).value = "Нет доступа к контроллеру";
+        document.getElementById("phases" + id).value = "Нет доступа к контроллеру";
     }
     GetPhase(id);
 }
@@ -34,8 +40,11 @@ async function GetPhase(id)
         let response = await fetch(requestURL);
         if (response.ok) {
             let commits = await response.json();
+            var problem = document.getElementById("problems" + id);
             phase = commits['current_phase_id'].toString();
             status = commits['status'].toString();
+            if (status != "OK")
+                problem.value = "Неправильный статус";
             if (parseInt(document.getElementById("phases" + id).value) < parseInt(phase))
                 document.getElementById("phases" + id).value = phase;
             document.getElementById("status" + id).value = "статус - " + status;
@@ -46,10 +55,31 @@ async function GetPhase(id)
         }
         
     } catch{
+        document.getElementById("problems" + id).value = "Невозможно подключиться к status";
         document.getElementById("status" + id).value = "Нет доступа к контроллеру";
         document.getElementById("phase" + id).value = "Нет доступа к контроллеру";
     }
 }
 async function SetProgramm(id) {
     document.getElementById("button" + id).value = "Не удалось открыть файл";
+}
+
+async function PhaseTime(id) {
+    var rc = document.getElementById("cycleTime" + id.toString());
+    var times = [];
+    for (var i = 0; i <parseInt(document.getElementById("phases" + id.toString())); i++)
+        times.push();
+    for (var i = 0; i < parseInt(rc.value); i++) {
+        GetPhase(id);
+        var phase = document.getElementById("phase" + id.toString());
+        if (phase > times.length)
+            for (var i = 0; i < phase - times.length; i++)
+                times.push();
+        times[phase-1]++;
+        setTimeout(function () {}, parseInt(rc.value)*10+1);
+    }
+    console.log(times);
+}
+function SaveInfo() {
+
 }
