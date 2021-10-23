@@ -8,38 +8,337 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="Get phase">
-        Введите id дорожного контроллера
-        <input type="text" id="dk">
-        <input type="button" value="Проверить id" onclick="GetInfo()">
-    </div class info>
-    <div>
-        Контроль состояние и фазы
-    <input type="text" id="status">
-    <input type="text" id="phase">
+    <div class="Info" id="26971">
+        <h1>№26971</h1>
+        <h2>Контроль состояния и фазы</h2>
+        <div>
+            <input type="text" id="status26971" value="Ожидание...">
+            <input type="text" id="phase26971" value="Ожидание...">
+        </div>
+        <div>
+            <h2>Информация о программе</h2>
+            <div>
+                Начало работы программы
+                <input type="text" id="start26971" value="Ожидание..."">
+            </div>
+            <div>
+                Конец работы программы
+                <input type="text" id="end26971" value="Ожидание...">
+            </div>
+            <div>
+                Количество фаз
+                <input type="text" id="phases26971">
+            </div>
+            <div>
+                Время цикла
+                <input type="text" id="cycleTime26971" value="Ожидание...">
+            </div>
+        </div>
+        <div>
+            Установить другую программу
+            <input type="text" value="26971.txt" id="path26971">
+            <input type="button" value="Установить программу" id="button26971">
+        </div>
     </div>
-    <div class="Programm info">
-        Информация о программе
+    <div class="Info" id="26972">
+        <h1>№26972</h1>
+        <h2>Контроль состояния и фазы</h2>
         <div>
-            Начало работы программы
-        <input type="text" id="start">
+            <input type="text" id="status26972" value="Ожидание...">
+            <input type="text" id="phase26972" value="Ожидание...">
         </div>
         <div>
-            Конец работы программы
-        <input type="text" id="end">
-        </div>
-        <div>
-            Количество фаз
-        <input type="text" id="phases">
-        </div>
-        <div>
-            Время фаз
-        <input type="text" id="phasesTime">
-        </div>
-        <div>
-            Время цикла
-        <input type="text" id="cycleTime">
+            <h2>Информация о программе</h2>
+            <div>
+                Начало работы программы
+                <input type="text" id="start26972" value="Ожидание...">
+            </div>
+            <div>
+                Конец работы программы
+                <input type="text" id="end26972" value="Ожидание...">
+            </div>
+            <div>
+                Количество фаз
+                <input type="text" id="phases26972">
+            </div>
+            <div>
+                Время цикла
+                <input type="text" id="cycleTime26972" value="Ожидание...">
+            </div>
+            <div>
+                Установить другую программу
+                <input type="text" value="26972.txt" id="path26972">
+                <input type="button" value="Установить программу" id="button26972" onclick="SetProgramm(26972)">
+            </div>
         </div>
     </div>
+    <div class="Info" id="26973">
+        <h1>№26973</h1>
+        <h2>Контроль состояния и фазы</h2>
+        <div>
+            <input type="text" id="status26973" value="Ожидание...">
+            <input type="text" id="phase26973" value="Ожидание...">
+        </div>
+        <div>
+            <h2>Информация о программе</h2>
+            <div>
+                Начало работы программы
+                <input type="text" id="start26973">
+            </div>
+            <div>
+                Конец работы программы
+                <input type="text" id="end26973">
+            </div>
+            <div>
+                Количество фаз
+                <input type="text" id="phases26973">
+            </div>
+            <div>
+                Время цикла
+                <input type="text" id="cycleTime26973">
+            </div>
+            <div>
+                Установить другую программу
+                <input type="text" value="26973.txt" id="path26973">
+                <input type="button" value="Установить программу" id="button26973">
+            </div>
+        </div>
+    </div>
+    <div class="Info" id="2697">
+        <h1>№26974</h1>
+        <h2>Контроль состояния и фазы</h2>
+        <div>
+            <input type="text" id="status26974">
+            <input type="text" id="phase26974">
+        </div>
+        <div>
+            <h2>Информация о программе</h2>
+            <div>
+                Начало работы программы
+                <input type="text" id="start26974">
+            </div>
+            <div>
+                Конец работы программы
+                <input type="text" id="end26974">
+            </div>
+            <div>
+                Количество фаз
+                <input type="text" id="phases26974">
+            </div>
+            <div>
+                Время цикла
+                <input type="text" id="cycleTime26974">
+            </div>
+            <div>
+                Установить другую программу
+                <input type="text" value="26974.txt" id="path26974">
+                <input type="button" value="Установить программу" id="button26974">
+            </div>
+        </div>
+    </div>
+    <div class="Info" id="26975">
+        <h1>№26975</h1>
+        <h2>Контроль состояния и фазы</h2>
+        <div>
+            <input type="text" id="status26975">
+            <input type="text" id="phase26975">
+        </div>
+        <div>
+            <h2>Информация о программе</h2>
+            <div>
+                Начало работы программы
+                <input type="text" id="start26975">
+            </div>
+            <div>
+                Конец работы программы
+                <input type="text" id="end26975">
+            </div>
+            <div>
+                Количество фаз
+                <input type="text" id="phases26975">
+            </div>
+            <div>
+                Время цикла
+                <input type="text" id="cycleTime26975">
+            </div>
+            <div>
+                Установить другую программу
+                <input type="text" value="26975.txt" id="path26975">
+                <input type="button" value="Установить программу" id="button26975">
+            </div>
+        </div>
+    </div>
+    <div class="Info" id="26976">
+        <h1>№26976</h1>
+        <h2>Контроль состояния и фазы</h2>
+        <div>
+            <input type="text" id="status26976">
+            <input type="text" id="phase26976">
+        </div>
+        <div>
+            <h2>Информация о программе</h2>
+            <div>
+                Начало работы программы
+                <input type="text" id="start26976">
+            </div>
+            <div>
+                Конец работы программы
+                <input type="text" id="end26976">
+            </div>
+            <div>
+                Количество фаз
+                <input type="text" id="phases26976">
+            </div>
+            <div>
+                Время цикла
+                <input type="text" id="cycleTime26976">
+            </div>
+            <div>
+                Установить другую программу
+                <input type="text" value="26976.txt" id="path26976">
+                <input type="button" value="Установить программу" id="button26976">
+            </div>
+        </div>
+    </div>
+    <div class="Info" id="26977">
+        <h1>№26977</h1>
+        <h2>Контроль состояния и фазы</h2>
+        <div>
+            <input type="text" id="status26977">
+            <input type="text" id="phase26977">
+        </div>
+        <div>
+            <h2>Информация о программе</h2>
+            <div>
+                Начало работы программы
+                <input type="text" id="start26977">
+            </div>
+            <div>
+                Конец работы программы
+                <input type="text" id="end26977">
+            </div>
+            <div>
+                Количество фаз
+                <input type="text" id="phases26977">
+            </div>
+            <div>
+                Время цикла
+                <input type="text" id="cycleTime26977">
+            </div>
+            <div>
+                Установить другую программу
+                <input type="text" value="26977.txt" id="path26977">
+                <input type="button" value="Установить программу" id="button26977">
+            </div>
+        </div>
+    </div>
+    <div class="Info" id="26978">
+        <h1>№26978</h1>
+        <h2>Контроль состояния и фазы</h2>
+        <div>
+            <input type="text" id="status26978">
+            <input type="text" id="phase26978">
+        </div>
+        <div>
+            <h2>Информация о программе</h2>
+            <div>
+                Начало работы программы
+                <input type="text" id="start26978">
+            </div>
+            <div>
+                Конец работы программы
+                <input type="text" id="end26978">
+            </div>
+            <div>
+                Количество фаз
+                <input type="text" id="phases26978">
+            </div>
+            <div>
+                Время цикла
+                <input type="text" id="cycleTime26978">
+            </div>
+            <div>
+                Установить другую программу
+                <input type="text" value="26978.txt" id="path26978">
+                <input type="button" value="Установить программу" id="button26978">
+            </div>
+        </div>
+    </div>
+    <div class="Info" id="26979">
+        <h1>№26979</h1>
+        <h2>Контроль состояния и фазы</h2>
+        <div>
+            <input type="text" id="status26979">
+            <input type="text" id="phase26979">
+        </div>
+        <div>
+            <h2>Информация о программе</h2>
+            <div>
+                Начало работы программы
+                <input type="text" id="start26979">
+            </div>
+            <div>
+                Конец работы программы
+                <input type="text" id="end26979">
+            </div>
+            <div>
+                Количество фаз
+                <input type="text" id="phases26979">
+            </div>
+            <div>
+                Время цикла
+                <input type="text" id="cycleTime26979">
+            </div>
+            <div>
+                Установить другую программу
+                <input type="text" value="26979.txt" id="path26979">
+                <input type="button" value="Установить программу" id="button26979">
+            </div>
+        </div>
+    </div>
+    <div class="Info" id="26980">
+        <h1>№26980</h1>
+        <h2>Контроль состояния и фазы</h2>
+        <div>
+            <input type="text" id="status26980">
+            <input type="text" id="phase26980">
+        </div>
+        <div>
+            <h2>Информация о программе</h2>
+            <div>
+                Начало работы программы
+                <input type="text" id="start26980">
+            </div>
+            <div>
+                Конец работы программы
+                <input type="text" id="end26980">
+            </div>
+            <div>
+                Количество фаз
+                <input type="text" id="phases26980">
+            </div>
+            <div>
+                Время цикла
+                <input type="text" id="cycleTime26980">
+            </div>
+            <div>
+                Установить другую программу
+                <input type="text" value="26980.txt" id="path26980">
+                <input type="button" value="Установить программу" id="button26980">
+            </div>
+        </div>
+    </div>
+    <script>
+        setInterval(function() {GetInfo(26971)}, 1000);
+        setInterval(function() {GetInfo(26972)}, 1000);
+        setInterval(function() {GetInfo(26973)}, 1000);
+        setInterval(function() {GetInfo(26974)}, 1000);
+        setInterval(function() {GetInfo(26975)}, 1000);
+        setInterval(function() {GetInfo(26976)}, 1000);
+        setInterval(function() {GetInfo(26977)}, 1000);
+        setInterval(function() {GetInfo(26978)}, 1000);
+        setInterval(function() {GetInfo(26979)}, 1000);
+        setInterval(function() {GetInfo(26980)}, 1000);
+    </script>
 </body>
 </html>
