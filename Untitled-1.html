@@ -378,7 +378,6 @@
         </div>
     </div>
     <script>
-        setTimeout(function(){}, 3000);
         var i = 0;
         // while (i != 10)
         //     for (var j = 0; j<10; j++) {
@@ -388,6 +387,11 @@
         //    }
         // if (i == 10)
         //     SaveInfo();
+        
+        // Для реализации мониторинга подключаемся к каждому ДК раз в T_cycle*10+1
+        // *10 необходим для того, чтобы запрос не происходил слишком часто, 
+        // в противном случае программа может работать некорректно
+        // + нужен для отслеживание длины фазы программы
         setInterval(function() {GetInfo(26971)}, parseInt(document.getElementById("cycleTime26971").value)*10+1);
         setInterval(function() {GetInfo(26972)}, parseInt(document.getElementById("cycleTime26972").value)*10+1);
         setInterval(function() {GetInfo(26973)}, parseInt(document.getElementById("cycleTime26973").value)*10+1);
